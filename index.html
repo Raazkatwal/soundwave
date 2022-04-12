@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUNDWAVE | FEEL THE MUSIC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            margin-top: auto;
+            display: grid;
+            place-items: center;
+            background-color: var(--primary-color);
+            height: 99vh;
+            transition: .8s;
+        }
+        .contents{
+            color: var(--secondary-color);
+            margin-left: 40%;
+        }
+        .maintext h1{
+            font-size: 6rem;
+            font-family: 'Merriweather', serif;
+        }
+        .maintext p{
+            font-family: 'Merriweather', sans-serif;
+            margin: 2rem 0 2.5rem 0;
+            font-size: 1.6rem;
+        }
+        .maintext button{
+            border: none;
+            background-color: var(--accent-color);
+            padding: 1.3rem 3rem ;
+            font-size: 1.6rem;
+            color: white;
+            font-weight: 550;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+        .contents img{
+            position: absolute;
+            width: 70rem;
+            height: 50rem;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="icon">
+            <i class="fa-solid fa-compact-disc"></i><h1>SOUND-WAVE</h1>
+        </div>
+        <i class="fa-solid fa-bars menu-btn"></i>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a class="palette"><i class="fa-solid fa-palette"></i> Change theme</a></li>
+        </ul>
+    </nav>
+    <dialog class="theme-changer">
+        <h1 class="main-head">Change theme</h1>
+        <h1 class="sec-head">Primary color</h1>
+        <p>The overall backgroud color.</p>
+        <div class="color-chooser">
+            <div class="color p1" onclick="p1()"></div>
+            <div class="color p2" onclick="p2()"></div>
+            <div class="color p3" onclick="p3()"></div>
+            <div class="color p4" onclick="p4()"></div>
+            <div class="color p5" onclick="p5()"></div>
+        </div>
+        <h1 class="sec-head">Secondary color</h1>
+        <p>Text and shit.</p>
+        <div class="color-chooser">
+            <div class="color s1" onclick="s1()"></div>
+            <div class="color s2" onclick="s2()"></div>
+            <div class="color s3" onclick="s3()"></div>
+            <div class="color s4" onclick="s4()"></div>
+            <div class="color s5" onclick="s5()"></div>
+        </div>
+        <h1 class="sec-head">Accent color</h1>
+        <p>Button and links.</p>
+        <div class="color-chooser">
+            <div class="color a1" onclick="a1()"></div>
+            <div class="color a2" onclick="a2()"></div>
+            <div class="color a3" onclick="a3()"></div>
+            <div class="color a4" onclick="a4()"></div>
+            <div class="color a5" onclick="a5()"></div>
+        </div>
+        <button id="modalbtn">Okay</button>
+    </dialog>
+    <div class="container">
+        <div class="contents">
+            <img src="img/stockimg.png" alt="">
+            <div class="maintext">
+                <h1>Feel The Music</h1>
+                <p>Stream over 20 thousand songs in one click</p>
+                <button>Listen Now</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

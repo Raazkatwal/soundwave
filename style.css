@@ -1,0 +1,181 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%; /* makes 1rem = 10px */
+}
+:root{
+  --primary-color: #f2dbe6;
+  --secondary-color: #da6056;
+  --accent-color: #3ab3b3;
+}
+.pri1{--primary-color: #f2dbe6; }
+.pri2{--primary-color: #151515; }
+.pri3{--primary-color: #659dbd; }
+.pri4{--primary-color: #5cdb95; }
+.pri5{--primary-color: #1f2833; }
+
+.sec1{--secondary-color: #da6056; }
+.sec2{--secondary-color: #f2dbe6; }
+.sec3{--secondary-color: #daad86; }
+.sec4{--secondary-color: #c3073f; }
+.sec5{--secondary-color: #66fcf1; }
+
+.acc1{--accent-color: #3ab3b3; }
+.acc2{--accent-color: #4dbf00; }
+.acc3{--accent-color: #fc4445; }
+.acc4{--accent-color: #05386b; }
+.acc5{--accent-color: #45a29e; }
+body{
+  transition: .8s;
+  background-color: var(--primary-color);
+}
+nav{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161616;
+  color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.icon{
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+}
+.fa-compact-disc{
+  font-size: 3rem;
+  padding: 0 1.5rem 0 2.5rem;
+}
+nav ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 1.5rem 2.5rem;
+  display: block;
+}
+nav ul li a:hover{
+  background: #777;
+}
+.fa-bars{
+  font-size: 3rem;
+  position: absolute;
+  display: none;
+  transform: translate(-100%, 50%);
+  right:0%;
+  color: white;
+}
+.palette{
+  cursor: pointer;
+}
+.theme-changer{
+  margin: auto;
+  border: none;
+  position: fixed;
+  width: 60%;
+  height: 90%;
+  border-radius: 1.5rem;
+  background-color: var(--primary-color);
+}
+.theme-changer::backdrop{
+  background: rgba(0, 0, 0, 0.5);
+}
+.theme-changer h1{
+  color: var(--secondary-color);
+}
+.theme-changer .main-head{
+  text-align: center;
+ font-size: 4.5rem;
+ font-family: 'Merriweather', sans-serif;
+ margin-bottom: 1.5rem;
+}
+.theme-changer .sec-head{
+  font-family: sans-serif;
+  font-size: 3rem;
+  margin: 0 2%;
+}
+.theme-changer p{
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  margin: 0 2%;
+  color: #777;
+}
+.color-chooser{
+  margin: 3% 2% 3% 2%;
+  display: flex;
+  justify-content: space-around;
+}
+.color{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 2px solid blue;
+}
+#modalbtn{
+  border: none;
+  outline: none;
+  background-color: var(--accent-color);
+  padding: 1.3rem 3rem ;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 550;
+  border-radius: .5rem;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 2%;
+  right: 10%;
+}
+.p1{background: #f2dbe6;}
+.p2{background: #151515;}
+.p3{background: #659dbd}
+.p4{background: #5cdb95;}
+.p5{background: #1f2833;}
+
+.s1{background: #da6056;}
+.s2{background: #f2dbe6;}
+.s3{background: #daad86;}
+.s4{background: #c3073f;}
+.s5{background: #66fcf1;}
+
+.a1{background: #3ab3b3;}
+.a2{background: #4dbf00;}
+.a3{background: #fc4445;}
+.a4{background: #05386b;}
+.a5{background: #45a29e;}
+@media screen and (max-width:830px) {
+  html{
+    font-size: 55%;
+  }
+  .fa-bars{
+    display: block;
+  }
+  nav ul{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links li {
+    text-align: center;
+  }
+  .nav-links.navactive{
+    display: flex;
+  }
+}
